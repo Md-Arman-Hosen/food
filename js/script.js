@@ -42,7 +42,8 @@ const loadMealDetail = idMeal => {
     const url =`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`
     fetch(url)
     .then(res => res.json())
-    .then (data => displayMealsDetails(data.meals[0]));
+    .then (data => displayMealsDetails(data.meals[0]))
+    .catch (error=>console.log(error));
 }
 const displayMealsDetails = meal => {
     document.getElementById('mealDetailsLabel').innerHTML = meal.strMeal;
