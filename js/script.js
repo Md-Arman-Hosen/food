@@ -21,7 +21,9 @@ const displayMeals = (meals)=>{
             <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
               <div class="card-body">
                   <h5 class="card-title">${meal.strMeal}</h5>
-                  <p class="card-text">${meal.strInstructions}</p>
+                  <p class="card-text overflow-y-scroll"style="height: 140px;">${meal.strInstructions}</p>
+         
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal"    data-bs-target="#mealDetails">Details </button>
               </div>
         </div>
     `;
