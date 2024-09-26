@@ -49,7 +49,7 @@ const displayMealsDetails = meal => {
     document.getElementById('mealDetailsBody').innerHTML =
     `<img class = "img-fluid rounded " src="${meal.strMealThumb}">
     <p class="card-text overflow-y-scroll"style="height: 140px;">${meal.strInstructions}</p>
-    `;
+    <a href="${meal.strYoutube}">${meal.strMeal} Recipe-Video</a>`;
 
 
 }
