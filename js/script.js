@@ -23,7 +23,7 @@ const displayMeals = (meals)=>{
                   <h5 class="card-title">${meal.strMeal}</h5>
                   <p class="card-text overflow-y-scroll"style="height: 140px;">${meal.strInstructions}</p>
          
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal"    data-bs-target="#mealDetails">Details </button>
+                <button onclick = "loadMealDetail(${meal.idMeal})"; type="button" class="btn btn-primary" data-bs-toggle="modal"    data-bs-target="#mealDetails">Details </button>
               </div>
         </div>
     `;
@@ -36,6 +36,22 @@ const searchMeals=()=>{
  const searchText = document.getElementById('search-field').value;
  console.log(searchText);
  loadMeals(searchText);
+}
+
+const loadMealDetail = idMeal => {
+    const url =`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`
+    fetch(url)
+    .then(res => res.json())
+    .then (data => displayMealsDetails(data.meals[0]));
+}
+const displayMealsDetails = meal => {
+    document.getElementById('mealDetailsLabel').innerHTML = meal.strMeal;
+    document.getElementById('mealDetailsBody').innerHTML =
+    `<img class = "img-fluid rounded " src="${meal.strMealThumb}">
+    <p class="card-text overflow-y-scroll"style="height: 140px;">${meal.strInstructions}</p>
+    `;
+
+
 }
 
 loadMeals('fish');
