@@ -18,7 +18,7 @@ const displayMeals = (meals)=>{
         mealdiv.classList.add('col');
         mealdiv.innerHTML = `
         <div class="card">
-            <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
+            <img src="${meal.strMealThumb}" class="card-img-top p-2 rounded " alt="...">
               <div class="card-body">
                   <h5 class="card-title">${meal.strMeal}</h5>
                   <p class="card-text overflow-y-scroll"style="height: 140px;">${meal.strInstructions}</p>
@@ -35,6 +35,7 @@ const searchMeals=()=>{
     // console.log('btn-click')
  const searchText = document.getElementById('search-field').value;
  console.log(searchText);
+ document.getElementById('search-field').value = '';
  loadMeals(searchText);
 }
 
