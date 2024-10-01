@@ -40,8 +40,8 @@ const displayCarousel = () => {
     const carouselContainer = document.getElementById('carousel-container');
     const carouselSection = document.createElement('div');
     carouselSection.innerHTML = `
-<div class="card text-bg-dark">
-        <img src="image/banner_1.png" class="card-img" alt="banner-image">
+<div class="card text-bg-dark text-center ">
+        <img src="image/banner_1.png" class="card-img opacity-75" alt="banner-image">
         <div class="card-img-overlay">
           <h1 class="card-title">Taste Our Delicious Best Foods</h1>
           <p class="card-text">There are many variations of Foods available in this World.The world's diverse cuisine includes sushi from Japan, Italian pasta, Indian curry, Mexican tacos, French pastries, Middle Eastern falafel, and American burgers.</p>
