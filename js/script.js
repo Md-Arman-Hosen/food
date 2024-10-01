@@ -32,6 +32,7 @@ const displayNav = () => {
         </div>
       </nav>
 `;
+
     navContainer.appendChild(navSection);
 }
 
@@ -39,17 +40,18 @@ const displayCarousel = () => {
     const carouselContainer = document.getElementById('carousel-container');
     const carouselSection = document.createElement('div');
     carouselSection.innerHTML = `
-    <div  class="carousel-item active container-fluid">
-    <img class="image-fluid w-100" src="image/banner_1.png" alt="...">
-    <div class="carousel-caption">
-      <h1 class="fs-1">Taste Our Delicious Best Foods</h1>
-      <p>There are many variations of Foods available in this World.The world's diverse cuisine includes sushi from Japan, Italian pasta, Indian curry, Mexican tacos, French pastries, Middle Eastern falafel, and American burgers.</p>
-      <div class="container-fluid">
-        <input class="px-2 rounded" type="text" name="" id="search-field" placeholder="search">
-        <button onclick="searchMeals()" class="btn btn-warning">Search</button>
+<div class="card text-bg-dark">
+        <img src="image/banner_1.png" class="card-img" alt="banner-image">
+        <div class="card-img-overlay">
+          <h1 class="card-title">Taste Our Delicious Best Foods</h1>
+          <p class="card-text">There are many variations of Foods available in this World.The world's diverse cuisine includes sushi from Japan, Italian pasta, Indian curry, Mexican tacos, French pastries, Middle Eastern falafel, and American burgers.</p>
+          <div class="container-fluid">
+            <input class="px-2 rounded" type="text" name="" id="search-field" placeholder="search">
+            <button onclick="searchMeals()" class="btn btn-warning">Search</button>
+          </div>
+        </div>
       </div>
-  </div>
-</div>
+
     
     `;
     carouselContainer.appendChild(carouselSection);
